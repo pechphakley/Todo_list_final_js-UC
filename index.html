@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="data.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Task Manager</h1>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat-item">Total: <span id="totalCount">0</span></div>
+      <div class="stat-item">Done: <span id="doneCount">0</span></div>
+      <div class="stat-item">Active: <span id="activeCount">0</span></div>
+
+    </div>
+
+    <div class="task-form">
+      <input type="text" id="taskName" placeholder="What needs to be done?">
+      <div style="display:flex; gap:10px;">
+        <input type="date" id="startDate">
+        <input type="date" id="endDate">
+      </div>
+
+      <button class="main-btn" onclick="addTask()" id="addBtn">
+        Add New Task
+      </button>
+
+      <button class="main-btn" onclick="updateTask()" id="updateBtn" style="display:none;">
+        Update Task
+      </button>
+    </div>
+
+    <div class="task-list" id="taskList"></div>
+  </div>
+
+</body>
+
+</html>
